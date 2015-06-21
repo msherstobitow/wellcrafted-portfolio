@@ -30,8 +30,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'wellcrafted_core_initilized', 'wellcrafted_portfolio_initialize' );
 
 function wellcrafted_portfolio_initialize() {
-    require 'classes/portfolio.php';
-    Wellcrafted_Portfolio::instance()->init();
+    require dirname( __FILE__ ) . '/wellcrafted/portfolio/portfolio.php';
+    \Wellcrafted\Portfolio\Portfolio::instance()->init();
 }
 
 

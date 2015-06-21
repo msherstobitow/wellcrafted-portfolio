@@ -1,4 +1,7 @@
 <?php
+namespace Wellcrafted\Portfolio;
+
+use \Wellcrafted\Core\Plugin as Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
     header('HTTP/1.0 403 Forbidden');
@@ -17,14 +20,14 @@ if ( ! defined( 'WELLCRAFTED_PORTFOLIO' ) ) {
  * @version 1.0.0
  * @package Wellcrafted\Portfolio
  */
-class Wellcrafted_Portfolio extends Wellcrafted_Plugin  {
+class Portfolio extends Plugin  {
 
     /**
      * Add into a class Singleton pattern ability
      *
      * @since  1.0.0
      */
-    use Wellcrafted_Singleton_Trait;
+    use \Wellcrafted\Core\Traits\Singleton;
 
     /**
      * A developer's support email. 
@@ -47,7 +50,7 @@ class Wellcrafted_Portfolio extends Wellcrafted_Plugin  {
      * @since  1.0.0
      */
     public function init() {
-        new Wellcrafted_Portfolio_Project_Post_Type();
+        new Project\Post\Type();
     }
 
 } 
