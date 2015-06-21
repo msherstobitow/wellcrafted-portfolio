@@ -1,5 +1,7 @@
 <?php
 
+namespace Wellcrafted\Portfolio\Project\Post;
+
 if ( ! defined( 'ABSPATH' ) ) {
     header('HTTP/1.0 403 Forbidden');
     exit;
@@ -12,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @version 1.0.0
  * @package Wellcrafted\Portfolio
  */
-class Wellcrafted_Portfolio_Project_Post_Type extends Wellcrafted_Public_Post_Type {
+class Type extends \Wellcrafted\Core\Post\Type\Open {
 
     /**
      * Post type. (max. 20 characters, cannot contain capital letters or spaces) 
