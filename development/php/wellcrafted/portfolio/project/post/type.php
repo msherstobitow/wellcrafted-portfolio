@@ -71,5 +71,24 @@ class Type extends \Wellcrafted\Core\Post\Type\Open {
         return $messages;
     }
 
+    /**
+     * Allows to modify bulk messages of a post type.
+     * 
+     * @param  array $messages Messages array
+     * @return array           Modified messages array
+     * @since  1.0.0
+     */
+    protected function current_bulk_post_updated_messages( $messages, $counts ) {
+        $messages = [
+            'updated'   => _n( '%s projects updated.', '%s projects updated.', $counts['updated'], WELLCRAFTED_PORTFOLIO ),
+            'locked'    => ( 1 == $counts['locked'] ) ? __( '1 project not updated, somebody is editing it.', WELLCRAFTED_PORTFOLIO ) :
+                               _n( '%s project not updated, somebody is editing it.', '%s projects not updated, somebody is editing them.', $counts['locked'], WELLCRAFTED_PORTFOLIO ),
+            'deleted'   => _n( '%s project permanently deleted.', '%s projects permanently deleted.', $counts['deleted'], WELLCRAFTED_PORTFOLIO ),
+            'trashed'   => _n( '%s project moved to the Trash.', '%s projects moved to the Trash.', $counts['trashed'], WELLCRAFTED_PORTFOLIO ),
+            'untrashed' => _n( '%s project restored from the Trash.', '%s projects restored from the Trash.', $counts['untrashed'], WELLCRAFTED_PORTFOLIO ),
+        ];
+        return $messages;
+    }
+
 }
 
