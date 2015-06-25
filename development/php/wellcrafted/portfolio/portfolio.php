@@ -45,12 +45,51 @@ class Portfolio extends Plugin  {
     protected $use_template_loader = true;
 
     /**
+     * Define a folder name to store plugin data in theme.
+     *
+     * The resulting folder is 'THEME_FOLDER/wellcrafted/$templates_folder/'
+     * @var null
+     * @since  1.0.0
+     */
+    protected $plugin_theme_folder = 'portfolio';
+
+    /**
      * Init class object.
      *
      * @since  1.0.0
      */
     public function init() {
         new Project\Post\Type();
+    }
+
+    /**
+     * @todo PHPDoc
+     * @param [type] $rules [description]
+     */
+    public function template_loader_rules() {
+        return [
+            [
+                'condition' => [
+                    'single' => 'wc_portfolioproject'
+                ],
+                'template' => 'single-project'
+            ],
+            [
+                'condition' => [
+                    'archive' => 'wc_portfolioproject'
+                ],
+                'template' => 'project-archive'
+            ]
+        ];
+    }
+
+    /**
+     * Return plugin's textdomain
+     * @return string textdomain
+     * @since  1.0.0
+     */
+    protected function textdomain() {
+        return WELLCRAFTED_PORTFOLIO;
     }
 
 } 
