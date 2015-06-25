@@ -53,4 +53,12 @@ class Portfolio extends Plugin  {
         new Project\Post\Type();
     }
 
+    /**
+     * @todo PHPDoc
+     * @return [type] [description]
+     */
+    protected function textdomain() {
+        return WELLCRAFTED_PORTFOLIO;
+    }
+
 } 
