@@ -25,6 +25,14 @@ class Type extends \Wellcrafted\Core\Post\Type\Open {
     protected $post_type = 'wc_portfolioproject';
 
     /**
+     * Enables post type archives. Will use $post_type as archive slug by default. 
+     * 
+     * @var boolean
+     * @since  1.0.0
+     */
+    protected $has_archive = true;
+
+    /**
      * Adds extra supports to defaults
      * 
      * @var array
