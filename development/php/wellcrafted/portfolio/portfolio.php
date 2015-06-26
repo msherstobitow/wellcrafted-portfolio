@@ -60,6 +60,8 @@ class Portfolio extends Plugin  {
      */
     public function init() {
         new Project\Post\Type();
+        new Project\Category\Taxonomy();
+        new Project\Tag\Taxonomy();
     }
 
     /**
@@ -70,13 +72,14 @@ class Portfolio extends Plugin  {
         return [
             [
                 'condition' => [
-                    'single' => 'wc_portfolioproject'
+                    'single' => Wellcrafted\Core\Post\Type::get_filtered_post_type_name( 'wc_portfolioproject' )
+                    
                 ],
                 'template' => 'single-project'
             ],
             [
                 'condition' => [
-                    'archive' => 'wc_portfolioproject'
+                    'archive' => Wellcrafted\Core\Post\Type::get_filtered_post_type_name( 'wc_portfolioproject' )
                 ],
                 'template' => 'project-archive'
             ]
