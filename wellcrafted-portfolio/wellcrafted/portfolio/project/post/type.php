@@ -58,8 +58,8 @@ class Type extends \Wellcrafted\Core\Post\Type\Open {
         $this->name_label = __( 'Projects', WELLCRAFTED_PORTFOLIO );
         $this->singular_name_label = __( 'Project', WELLCRAFTED_PORTFOLIO );
         $this->all_items_label = __( 'All projects', WELLCRAFTED_PORTFOLIO );
-        $this->add_new_label = __( 'Create new', WELLCRAFTED_PORTFOLIO );
-        $this->add_new_item_label = __( 'Create new project', WELLCRAFTED_PORTFOLIO );
+        $this->add_new_label = __( 'Add new', WELLCRAFTED_PORTFOLIO );
+        $this->add_new_item_label = __( 'Add new project', WELLCRAFTED_PORTFOLIO );
         $this->new_item_label = __( 'New project', WELLCRAFTED_PORTFOLIO );
         $this->menu_name_label = __( 'Portfolio', WELLCRAFTED_PORTFOLIO );
         $this->edit_item_label = __( 'Edit project', WELLCRAFTED_PORTFOLIO );
