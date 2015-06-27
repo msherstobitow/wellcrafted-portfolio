@@ -72,14 +72,14 @@ class Portfolio extends Plugin  {
         return [
             [
                 'condition' => [
-                    'single' => Wellcrafted\Core\Post\Type::get_filtered_post_type_name( 'wc_portfolioproject' )
-                    
+                    'single' => \Wellcrafted\Core\Post\Type::get_filtered_post_type_name( 'wc_portfolioproject' )
+
                 ],
                 'template' => 'single-project'
             ],
             [
                 'condition' => [
-                    'archive' => Wellcrafted\Core\Post\Type::get_filtered_post_type_name( 'wc_portfolioproject' )
+                    'archive' => \Wellcrafted\Core\Post\Type::get_filtered_post_type_name( 'wc_portfolioproject' )
                 ],
                 'template' => 'project-archive'
             ]
